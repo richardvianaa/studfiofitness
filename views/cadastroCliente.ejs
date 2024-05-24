@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Cliente</title>
+</head>
+
+<body>
+    <form action="/cadastro-cliente" method="post">
+        <input type="text" name="nomeCliente" id="" placeholder="Nome Cliente">
+        <input type="text" name="codeNomeCLiente" id="" placeholder="Nome de usuário">
+        <input type="number" name="idadeCliente" id="" placeholder="Idade do Cliente">
+        <input type="email" name="emailCliente" id="" placeholder="E-Mail do CLiente">
+        <input type="number" name="numeroCliente" id="" placeholder="Número do Cliente">
+
+        <label for="genero">Gênero:</label>
+        <select name="generoCliente" id="genero">
+            <option value="mas">Masculino</option>
+            <option value="fem">Feminino</option>
+            <option value="outro">Outro</option>
+        </select>
+
+        <button type="submit">Cadastrar Cliente</button>
+
+    </form>
+</body>
+
+</html>

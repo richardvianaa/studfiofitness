@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/cadastroADM.css">
+    <title>Sistema Interno Pessoal</title>
+</head>
+
+<body>
+    <div class="container-adm">
+        <div class="txt-studio">
+            <span>STUDIO</span>
+            <span>FITNESS</span>
+        </div>
+        <form class="content-form" action="/cadastroADM" method="post">
+            <h1>CADASTRO DE ADMINISTRADOR</h1>
+            <div class="geral">
+                <label for="nome">Nome Completo</label>
+                <input type="text" name="nomeADM" id="nome" />
+            </div>
+            <div class="geral">
+                <label for="codeNome">Nome de Administrador</label>
+                <input type="text" name="codeNomeADM" id="codeNome" />
+            </div>
+            <div class="geral">
+                <label for="email">E-Mail</label>
+                <input type="email" name="emailADM" id="email" />
+            </div>
+            <div class="geral">
+                <label for="senha">Password</label>
+                <input type="password" name="passwordADM" id="senha" />
+            </div>
+
+            <button type="submit">CADASTRAR</button>
+        </form>
+    </div>
+</body>
+
+</html>
