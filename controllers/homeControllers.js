@@ -1,6 +1,6 @@
 const homeController = {
     index: async (req, res) => {
-        return await res.send("Página inicial")
+        return await res.render("pag-inicial")
     }
 }
 
