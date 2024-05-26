@@ -4,27 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+    <link rel="stylesheet" href="/stylesheets/cadastroCliente.css">
     <title>Cadastro Cliente</title>
-</head>>
+</head>
 
 <body>
-    <form action="/cadastro-cliente" method="post">
-        <input type="text" name="nomeCliente" id="" placeholder="Nome Cliente">
-        <input type="text" name="codeNomeCLiente" id="" placeholder="Nome de usuário">
-        <input type="number" name="idadeCliente" id="" placeholder="Idade do Cliente">
-        <input type="email" name="emailCliente" id="" placeholder="E-Mail do CLiente">
-        <input type="number" name="numeroCliente" id="" placeholder="Número do Cliente">
+    <div class="container-cadastro-cliente">
+        <%-include("./sideBarHome/navBar.ejs")%>
+            <div class="content-cliente">
+                <form class="fomularioCliente" action="/cadastro-cliente" method="post">
+                    <h1 style="color: white; border-bottom: 1px solid white;border-bottom-width: 5px;">CADASTRO DE
+                        CLIENTE</h1>
+                    <div class="form-label-input">
+                        <label for="nome">Nome do Cliente:</label>
+                        <input type="text" name="nomeCliente" id="nome">
+                    </div>
+                    <div class="form-label-input">
+                        <label for="nomeUser">Nome de Usuário:</label>
+                        <input type="text" name="codeNomeCliente" id="nomeUser">
+                    </div>
 
-        <label for="genero">Gênero:</label>
-        <select name="generoCliente" id="genero">
-            <option value="mas">Masculino</option>
-            <option value="fem">Feminino</option>
-            <option value="outro">Outro</option>
-        </select>
+                    <div class="form-label-input" id="idade-numeroCliente">
+                        <div class="numberCliente">
+                            <label for="idade">Idade:</label>
+                            <input type="text" name="idadeCliente" id="idade">
+                        </div>
+                        <div class="idadeCliente">
+                            <label for="numero">Número <br>de Contato:</label>
+                            <input type="text" name="numeroCliente" id="numero">
+                        </div>
+                    </div>
 
-        <button type="submit">Cadastrar Cliente</button>
+                    <div class="form-label-input">
+                        <label for="email">E-Mail do CLiente:</label>
+                        <input type="email" name="emailCliente" id="email">
+                    </div>
 
-    </form>
+                    <div id="mensalidade-vencimentoCliente">
+                        <div class="valorMensalidade">
+                            <label for="mensalidade">Valor da Mensalidade:</label>
+                            <input type="text" name="mensalidadeCliente" id="mensalidade" placeholder="R$:">
+                        </div>
+                        <div class="dateMensalidade">
+                            <label for="validadeMensalidade">Vencimento da Mensalidade:</label>
+                            <input type="date" name="vencimentoCliente" id="validadeMensalidade">
+                        </div>
+                    </div>
+
+                    <div class="form-label-input generoCliente">
+                        <label for="genero">Gênero:</label>
+                        <select name="generoCliente" id="genero">
+                            <option value="mas">Masculino</option>
+                            <option value="fem">Feminino</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="btn-cadastroCliente">
+                        <button class="btn-cadastro"  type="submit">Cadastrar Cliente</button>
+                    </div>
+                </form>
+            </div>
+    </div>
 </body>
 
 </html>

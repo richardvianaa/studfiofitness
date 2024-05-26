@@ -19,7 +19,14 @@ module.exports = {
         allowNull: false,
       },
       numeroCliente: {
-        type: Sequelize.STRING, //MUDAR PARA NUMBER
+        type: Sequelize.STRING,
+      },
+      mensalidadeCliente: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      vencimentoCliente: {
+        type: Sequelize.DATEONLY,
         allowNull: false
       },
       generoCliente: {

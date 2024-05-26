@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Big+Shoulders+Display:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Big Shoulders Display", sans-serif;
+}
+
+.container-cadastro-cliente {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.content-cliente {
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.fomularioCliente {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20px 30px 25px;
+    gap: 20px;
+    box-shadow: 0px 1px 2px black;
+    background: linear-gradient(164deg, rgba(0, 0, 0, 1) 1%, rgba(0, 0, 0, 1) 22%, rgba(167, 4, 4, 1) 91%, rgba(167, 4, 4, 1) 100%);
+}
+
+/*idade-numberCliente*/
+#idade-numeroCliente {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.numberCliente {
+    width: 30%;
+    gap: 10px;
+    display: flex;
+}
+
+.numberCliente>label {
+    color: white;
+    letter-spacing: 1;
+    font-weight: 600;
+    font-size: 18pt;
+}
+
+.numberCliente>input {
+    width: 40%;
+    height: 5vh;
+    padding: 0 5px;
+    font-size: 12pt;
+    letter-spacing: 1px;
+    font-size: 16pt;
+    font-weight: 800;
+    outline: none;
+    text-align: center;
+}
+
+.idadeCliente {
+    color: white;
+    letter-spacing: 1;
+    font-weight: 600;
+    font-size: 18pt;
+    flex-grow: 1;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.idadeCliente>input {
+    width: 60%;
+    height: 5vh;
+    padding: 0 5px;
+    font-size: 12pt;
+    letter-spacing: 1px;
+    font-size: 16pt;
+    font-weight: 800;
+    outline: none;
+    text-align: center;
+}
+
+/*idade-numberCliente*/
+#mensalidade-vencimentoCliente {
+    display: flex;
+    flex-direction: row;
+}
+
+#date-mensalidade {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-label-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label-input>label {
+    color: white;
+    letter-spacing: 1;
+    font-weight: 600;
+    font-size: 18pt;
+}
+
+.form-label-input>input {
+    height: 5vh;
+    padding: 0 5px;
+    font-size: 14pt;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px ridge black;
+    outline: none;
+}
+
+/*mensalidade-vencimentoCliente*/
+#mensalidade-vencimentoCliente {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.valorMensalidade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.valorMensalidade>label {
+    color: white;
+    letter-spacing: 1;
+    font-weight: 600;
+    font-size: 18pt;
+}
+
+.valorMensalidade>input {
+    height: 5vh;
+    width: 70%;
+    padding: 0 5px;
+    font-size: 12pt;
+    letter-spacing: 1px;
+    font-size: 16pt;
+    font-weight: 800;
+    outline: none;
+    text-align: center;
+}
+
+.dateMensalidade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dateMensalidade>label {
+    color: white;
+    letter-spacing: 1;
+    font-weight: 600;
+    font-size: 18pt;
+}
+
+.dateMensalidade>input {
+    height: 5vh;
+    padding: 0 5px;
+    font-size: 12pt;
+    letter-spacing: 1px;
+    font-size: 16pt;
+    font-weight: 800;
+    outline: none;
+    text-align: center;
+}
+
+
+.generoCliente {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.generoCliente>label {
+    color: white;
+    letter-spacing: 1;
+    font-weight: 600;
+    font-size: 18pt;
+}
+
+.generoCliente>select {
+    height: 5vh;
+    padding: 0 5px;
+    font-size: 12pt;
+    letter-spacing: 1px;
+    font-size: 16pt;
+    font-weight: 800;
+    outline: none;
+    text-align: center;
+}
+
+.btn-cadastroCliente{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+.btn-cadastro{
+    color: white;
+    letter-spacing: 1;
+    font-weight: 600;
+    font-size: 16pt;
+    padding: 10px;
+    transition: all 0.3s;
+    
+    background: linear-gradient(260deg, rgb(80, 36, 36) 1%, rgba(80, 36, 36, 1) 22%, rgb(172, 145, 145) 91%, rgb(192, 174, 174) 100%);
+}
+@keyframes btn-cadastro {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.btn-cadastro:hover{
+    animation: btn-cadastro 0.7s infinite;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 1);
+}

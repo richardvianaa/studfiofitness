@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+    <link rel="stylesheet" href="stylesheets/geralClientes.css">
+    <title>Clientes Cadastrados</title>
+</head>
+
+<body>
+    <div class="container-clientesCadastrados">
+        <section class="content-clientesCadastrados">
+            <h1 style="font-size: 25pt; font-weight: 800; letter-spacing: 1px;">CLIENTES CADASTRADOS</h1>
+            <section class="serach-cliente">
+                <label for="clientes">Buscar Cliente: </label>
+                <input type="search" name="buscaClientes" id="clientes">
+            </section>
+            <a id="inicial-float" href="/pag-inicial">INICIO</a>
+            <section class="content-cards">
+                <% clienteAll.forEach(cliente=> { %>
+                    <div class="card-cliente">
+                        <div class="dados-cards">
+                            <span class="span-cliente">Nome:</span>
+                            <span class="dado-cliente">
+                                <%= cliente.nomeCliente%>
+                            </span>
+                        </div>
+                        <div class="i-n">
+                            <div class="dados-cards">
+                                <span class="span-cliente">Usuário:</span>
+                                <span class="dado-cliente">
+                                    <%= cliente.codeNomeCliente%>
+                                </span>
+                            </div>
+                            <div class="dados-cards">
+                                <span class="span-cliente">Idade:</span>
+                                <span class="dado-cliente">
+                                    <%= cliente.idadeCliente%>
+                                </span>
+                                </div>
+                        </div>
+                        <div class="dados-cards">
+                            <span class="span-cliente">Celular:</span>
+                            <span class="dado-cliente">
+                                <%= cliente.numeroCliente %>
+                            </span>
+                        </div>
+                        <div class="dados-cards">
+                            <span class="span-cliente">E-Mail:</span>
+                            <span class="dado-cliente">
+                                <%= cliente.emailCliente%>
+                            </span>
+                        </div>
+                        <div class="m-d">
+                            <div class="dados-cards">
+                                <span class="span-cliente">Valor<br> Mensalidade:</span>
+                                <span class="dado-cliente">R$<%= cliente.mensalidadeCliente%></span>
+                            </div>
+                            <div class="dados-cards">
+                                <span class="span-cliente">Vencimento <br>Mensalidade:</span>
+                                <span class="dado-cliente">
+                                    <%= cliente.vencimentoCliente%>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="dados-cards">
+                            <li class="span-cliente">Gênero:</li>
+                            <li class="dado-cliente">
+                                <%= cliente.generoCliente%>
+                            </li>
+                        </div>
+                    </div>
+                    <% }) %>
+            </section>
+        </section>
+    </div>
+</body>
+
+</html>

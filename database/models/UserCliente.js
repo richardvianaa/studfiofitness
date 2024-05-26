@@ -16,7 +16,15 @@ module.exports = (Sequelize, DataType) => {
             allowNull: false
         },
         numeroCliente: {
-            type: DataType.STRING, //MUDAR PARA NUMBER
+            type: DataType.STRING,
+            allowNull: false
+        },
+        mensalidadeCliente: {
+            type: DataType.STRING,
+            allowNull: false
+        },
+        vencimentoCliente: {
+            type: DataType.DATEONLY,
             allowNull: false
         },
         generoCliente: {

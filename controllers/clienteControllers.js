@@ -1,9 +1,12 @@
+const { formatDate } = require('date-fns');
 const database = require('..//database/models');
 
 
 var clienteController = {
     geral: async (req, res) => {
-        return await res.send('Página de Clientes')
+        let clienteAll = await database.UserCliente.findAll();
+
+        return await res.render('geralClientes', { clienteAll })
     },
     cadastro: async (req, res) => {
         return await res.render("cadastroCliente")
@@ -11,23 +14,26 @@ var clienteController = {
     registro: async (req, res) => {
         let {
             nomeCliente,
-            codeNomeCLiente,
+            codeNomeCliente,
             idadeCliente,
             emailCliente,
             numeroCliente,
-            generoCliente
+            generoCliente,
+            mensalidadeCliente,
+            vencimentoCliente
         } = req.body;
-
-        let userCliente = await database.UserCliente.create({
+        await database.UserCliente.create({
             nomeCliente,
-            codeNomeCLiente,
+            codeNomeCliente,
             idadeCliente,
             emailCliente,
             numeroCliente,
-            generoCliente
+            generoCliente,
+            mensalidadeCliente,
+            vencimentoCliente
         });
 
-        return res.json(userCliente)
+        return res.redirect('/cadastroSucesso')
     }
 }
 
